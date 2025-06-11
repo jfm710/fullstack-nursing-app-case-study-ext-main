@@ -1,0 +1,35 @@
+/* Custom styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.jumbotron {
+    background-color: #f8f9fa;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.application-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+#edit-app-table td {
+    background-color: transparent !important; /* Removes background overlay */
+}
+
+#edit-app-table a {
+    color: #000 !important;               /* Ensures text is visible */
+    box-shadow: none !important;          /* Removes any inherited box-shadow */
+}
