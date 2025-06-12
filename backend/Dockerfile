@@ -14,7 +14,7 @@ WORKDIR /app
 COPY pyproject.toml poetry.lock ./
 
 # Update the poetry.lock file
-RUN poetry lock --no-update
+RUN poetry lock
 
 # Install dependencies using poetry
 RUN poetry install --no-root

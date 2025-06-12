@@ -1,0 +1,43 @@
+{
+  "name": "nursing-application",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build",
+    "build": "rollup -c",
+    "tsc": "tsc",
+    "lint": "eslint scripts/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfm710/fullstack-nursing-app-case-study-ext-main.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "@eslint/css": "^0.8.1",
+    "@eslint/js": "^9.28.0",
+    "@eslint/json": "^0.12.0",
+    "@eslint/markdown": "^6.5.0",
+    "@html-eslint/eslint-plugin": "^0.41.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "eslint": "^9.28.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
+    "rollup": "^4.43.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  }
+}
