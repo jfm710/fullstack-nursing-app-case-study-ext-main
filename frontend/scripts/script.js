@@ -75,29 +75,6 @@ function validateForm() {
     return isValid;
 }
 
-async function submitApplicationForm(event) {
-    event.preventDefault(); // Prevents the default form submission
-    if (!validateForm()) return false;
-
-    const form = document.getElementById('applicationForm');
-    const formData = new FormData(form);
-
-    console.log(form);
-    console.log(formData);
-
-    try {
-        const res = await fetch('http://localhost:8000/applications', {
-            method: 'POST',
-            body: formData,
-        });
-        console.log('Submitted form:', res);
-        window.location.href = '/applications';
-    } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('There was an error submitting the form.');
-    }
-    return false;
-}
 
 
 async function editApplicationForm(event) {
