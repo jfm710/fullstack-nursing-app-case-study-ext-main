@@ -18,6 +18,9 @@ function loadApplications() {
                     Email: ${app.email}, 
                     Phone: ${app.phone}, 
                     GPA: ${app.gpa}, 
+                    Work Location: ${app.work_location}, 
+                    Passed NCLEX: ${app.passed_nclex}, 
+                    NCLEX State: ${app.nclex_state}, 
                     Submitted: ${app.submitted_at}
                 `;
                 listElement.appendChild(listItem);
@@ -121,6 +124,9 @@ function loadEditableApplications() {
                     <td>${app.email}</td>
                     <td>${app.phone}</td>
                     <td>${app.gpa}</td>
+                    <td>${app.work_location}</td>
+                    <td>${app.passed_nclex}</td>
+                    <td>${app.nclex_state}</td>
                     <td>${app.submitted_at}</td>
                     <td>
                         <a href="/edit_application/${app.id}" class="btn btn-primary">Edit</a>
@@ -155,6 +161,9 @@ function loadEditableApplication() {
             document.getElementById('email').value = data.email;
             document.getElementById('phone').value = data.phone;
             document.getElementById('gpa').value = data.gpa;
+            document.getElementById('work_location').value = data.work_location;
+            document.getElementById('passed_nclex').value = data.passed_nclex;
+            document.getElementById('nclex_state').value = data.nclex_state;
         })
         .catch(error => {
             console.error('Error fetching application for edit:', error);

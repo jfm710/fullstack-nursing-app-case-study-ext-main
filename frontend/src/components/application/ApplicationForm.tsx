@@ -1,4 +1,4 @@
-import React, {FormEvent, useCallback, useRef, useState} from "react";
+import React, {FormEvent, useCallback, useMemo, useRef, useState} from "react";
 import {postApplication} from "../../services/applications";
 import {EMAIL_PATTERN, PHONE_PATTERN} from "../../utils/utils";
 
@@ -8,6 +8,15 @@ function ApplicationForm() {
     const emailField: React.RefObject<null | HTMLInputElement> = useRef(null);
     const phoneField: React.RefObject<null | HTMLInputElement> = useRef(null);
     const gpaField: React.RefObject<null | HTMLInputElement> = useRef(null);
+    const workLocationField: React.RefObject<null | HTMLInputElement> = useRef(null);
+    const passedNCLEXField: React.RefObject<null | HTMLInputElement> = useRef(null);
+    const nclexLocationField: React.RefObject<null | HTMLInputElement> = useRef(null);
+
+    const [enableNCLEXLocation, setEnableNCLEXLocation] = useState(false);
+
+    const passedNCLEX = useCallback(() => {
+        setEnableNCLEXLocation(!!passedNCLEXField.current?.checked);
+    }, [passedNCLEXField])
 
     const [nameValid, setNameValid] = useState(true);
     const [emailValid, setEmailValid] = useState(true);
@@ -41,10 +50,12 @@ function ApplicationForm() {
         if (!validateForm()) return false;
 
         const formData = new FormData(event.currentTarget);
-        postApplication(formData).then(() => {
-            //TODO: Replace with a router
-            //navigate({to: '/applications', replace: false})
-            window.location.href = '/applications';
+        postApplication(formData).then((res) => {
+            if (res?.ok) {
+                //TODO: Replace with a router
+                //navigate({to: '/applications', replace: false})
+                window.location.href = '/applications';
+            }
         })
         return false;
     }, [validateForm])
@@ -74,6 +85,22 @@ function ApplicationForm() {
                     <input ref={gpaField} type="number" className="form-control" id="gpa" name="gpa" step="0.1" min="0"
                            max="4" required/>
                     {gpaValid ? null : <div id="gpaError" className="error">GPA must be between 0 and 4</div>}
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="work_location" className="form-label">Which locations are you willing to work
+                        in?</label>
+                    <input ref={workLocationField} type="text" className="form-control" id="work_location"
+                           name="work_location"/>
+                </div>
+                <div className="mb-3 form-check">
+                    <input ref={passedNCLEXField} type="checkbox" className="form-check-input" id="passed_nclex"
+                           name="passed_nclex" onChange={passedNCLEX}/>
+                    <label htmlFor="passed_nclex" className="form-check-label">Have you passed the NCLEX?</label>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="nclex_state" className="form-label">Which state did you pass the NCLEX?</label>
+                    <input disabled={!enableNCLEXLocation} ref={nclexLocationField} type="text" className="form-control"
+                           id="nclex_state" name="nclex_state"/>
                 </div>
                 <button type="submit" className="btn btn-primary">Submit Application</button>
             </form>

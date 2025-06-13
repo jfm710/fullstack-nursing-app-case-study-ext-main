@@ -57,6 +57,18 @@
                 <input type="number" class="form-control" id="gpa" name="gpa" step="0.1" min="0" max="4" required>
                 <div id="gpaError" class="error"></div>
             </div>
+            <div class="mb-3">
+                <label for="work_location" class="form-label">Which locations are you willing to work in?</label>
+                <input type="text" class="form-control" id="work_location" name="work_location"/>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="passed_nclex" name="passed_nclex"/>
+                <label for="passed_nclex" class="form-check-label">Have you passed the NCLEX?</label>
+            </div>
+            <div class="mb-3">
+                <label for="nclex_state" class="form-label">Which state did you pass the NCLEX?</label>
+                <input type="text" class="form-control" id="nclex_state" name="nclex_state"/>
+            </div>
             <button type="submit" class="btn btn-primary">Update Application</button>
             <a href="/admin" class="btn btn-secondary">Cancel</a>
         </form>

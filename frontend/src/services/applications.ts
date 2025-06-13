@@ -8,7 +8,7 @@ export const postApplication = async (formData: FormData) => {
             throw new Error('Error submitting form')
         }
         console.log('Submitted form:', res);
-        return;
+        return res;
     } catch (error) {
         console.error('Error submitting form:', error);
         alert('There was an error submitting the form.');
