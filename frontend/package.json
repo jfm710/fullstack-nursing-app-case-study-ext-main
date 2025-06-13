@@ -14,7 +14,7 @@
     "build": "npm run clean && rollup -c",
     "dev": "npm run clean && rollup -c -w",
     "tsc": "tsc",
-    "lint": "eslint scripts/**"
+    "lint": "eslint src/**"
   },
   "repository": {
     "type": "git",
