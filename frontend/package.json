@@ -34,6 +34,7 @@
     "@rollup/plugin-replace": "^6.0.2",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
+    "@tanstack/router-plugin": "^1.121.7",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@web/rollup-plugin-html": "^2.3.0",
@@ -48,6 +49,8 @@
     "typescript-eslint": "^8.34.0"
   },
   "dependencies": {
+    "@tanstack/react-router": "^1.121.2",
+    "@tanstack/react-router-devtools": "^1.121.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   }

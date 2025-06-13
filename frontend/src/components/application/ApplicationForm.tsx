@@ -42,7 +42,8 @@ function ApplicationForm() {
 
         const formData = new FormData(event.currentTarget);
         postApplication(formData).then(() => {
-            // Replace with a router
+            //TODO: Replace with a router
+            //navigate({to: '/applications', replace: false})
             window.location.href = '/applications';
         })
         return false;

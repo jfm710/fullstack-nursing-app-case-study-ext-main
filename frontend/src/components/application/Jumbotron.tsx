@@ -1,4 +1,3 @@
-import ApplicationForm from "./ApplicationForm";
 import React from "react";
 
 const Jumbotron = () => {
