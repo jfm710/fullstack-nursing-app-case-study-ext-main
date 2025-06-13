@@ -1,0 +1,57 @@
+{
+  "name": "nursing-application",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && rollup -c",
+    "dev": "npm run clean && rollup -c -w",
+    "tsc": "tsc",
+    "lint": "eslint src/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfm710/fullstack-nursing-app-case-study-ext-main.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "@babel/preset-react": "^7.27.1",
+    "@eslint/css": "^0.8.1",
+    "@eslint/js": "^9.28.0",
+    "@eslint/json": "^0.12.0",
+    "@eslint/markdown": "^6.5.0",
+    "@html-eslint/eslint-plugin": "^0.41.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@tanstack/router-plugin": "^1.121.7",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@web/rollup-plugin-html": "^2.3.0",
+    "eslint": "^9.28.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.2.0",
+    "rollup": "^4.43.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-watch": "^3.2.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.0"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.121.2",
+    "@tanstack/react-router-devtools": "^1.121.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}

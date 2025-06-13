@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true, // Rollup handles emission, TypeScript only does type checking and transpilation in memory for Rollup
+    "sourceMap": true, // Enable source maps for TypeScript
+    "baseUrl": "./src" // Optional: if you use path aliases
+  },
+  "include": ["src"] // Adjust to where your source files are
+}
