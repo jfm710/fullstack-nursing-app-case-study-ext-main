@@ -1,4 +1,4 @@
-import React, {FormEvent, useCallback, useMemo, useRef, useState} from "react";
+import React, {FormEvent, useCallback, useRef, useState} from "react";
 import {postApplication} from "../../services/applications";
 import {EMAIL_PATTERN, PHONE_PATTERN} from "../../utils/utils";
 

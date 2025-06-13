@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {createRootRoute, createRoute, createRouter, Link, Outlet, RouterProvider} from "@tanstack/react-router";
+import {createRootRoute, createRoute, createRouter, Outlet, RouterProvider} from "@tanstack/react-router";
 import {TanStackRouterDevtools} from "@tanstack/react-router-devtools";
 import NavBar from "./components/nav/NavBar";
 import ApplicationPage from "./components/application";
